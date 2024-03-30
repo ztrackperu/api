@@ -6,7 +6,7 @@ class ApiModel{
     public function __construct() {
         $this->con = new Conexion();
         $this->pdo = $this->con->conectar();
-    }
+    } 
     //buscamos si existe el dispositivo en control
 
     public function existeEnControl($nombre_contenedor)

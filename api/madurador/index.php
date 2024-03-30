@@ -16,7 +16,9 @@ error_reporting(E_ALL);
 
 // necesarios del modelo 
 require_once '../../models/api.php';
+require_once '../../models/api2.php';
 $api = new ApiModel();
+$api2 = new ApiModel2();
 $datosRecibidos = file_get_contents("php://input");
 require '../../vendor/autoload.php';
 //use Exception;
@@ -822,6 +824,33 @@ if($primerFiltro =="Madurador"){
                     
                 }        
                 $trama_respuesta .=",";
+                $comandosPendientesPost2 = $api2->comandosPendientes($segundoFiltro);
+                $contarComandosPendientesPost2 = $api2->contarComandos($segundoFiltro);
+                if($contarComandosPendientesPost2['count(*)'] != 0){
+                    foreach($comandosPendientesPost2 as $data1){
+                        $detalleComandopost2 = $api2->detalleComando($data1['comando_id']);
+                        if($detalleComandopost2['lista']==1){
+                            $trama_respuesta .=",SPTEMP(".$data1['valor_modificado'].")";
+                        }elseif($detalleComandopost2['lista']==2){
+                            $trama_respuesta .=",SPCO2(".$data1['valor_modificado'].")";
+                        }elseif($detalleComandopost2['lista']==3){
+                            $trama_respuesta .=",SPHUM(".$data1['valor_modificado'].")";
+                        }elseif($detalleComandopost2['lista']==6){
+                            $trama_respuesta .=",SPETI(".$data1['valor_modificado'].")";
+                        }elseif($detalleComandopost2['lista']==5){
+                            //$trama_respuesta .="POWER".$data1['valor_modificado'];
+                            $trama_respuesta .=",POWEROFF";
+                        }elseif($detalleComandopost2['lista']==7){
+                            $trama_respuesta .=",POWERON";
+                        }elseif($detalleComandopost2['lista']==8){
+                            $trama_respuesta .=",DEFROST";
+                        }else{
+                            $trama_respuesta .=",#".$detalleComandopost2['lista'].",".$data1['valor_modificado'];
+                        }
+                        
+                    } 
+
+                }
             }    
            $mensaje = $trama_respuesta;
     }
