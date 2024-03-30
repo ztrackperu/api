@@ -4,7 +4,7 @@ class Conexion{
     {
         $pdo = null;
         try {
-            $pdo = new PDO('mysql:host='.DB_HOST.';dbname='.DB_NAME.'', DB_USER, DB_PASS);
+            $pdo = new PDO('mysql:host='.DB_HOST2.';dbname='.DB_NAME2.'', DB_USER2, DB_PASS2);
             return $pdo;
         } catch (PDOException $e) {
             print "¡Error!: " . $e->getMessage() . "<br/>";
