@@ -4,7 +4,7 @@ require_once 'conexion2.php';
 class ApiModel2{
     private $pdo, $con;
     public function __construct() {
-        $this->con = new Conexion();
+        $this->con = new Conexion2();
         $this->pdo = $this->con->conectar();
     }
     public function comandosPendientes($nombre_dispositivo){

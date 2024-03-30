@@ -1,5 +1,5 @@
 <?php
-class Conexion{
+class Conexion2{
     public function conectar()
     {
         $pdo = null;
