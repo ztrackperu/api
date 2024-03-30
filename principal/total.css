@@ -1,0 +1,249 @@
+td.highlight {
+  background-color: #192 !important;
+}
+
+html.dark td.highlight {
+  background-color: rgba(25,44,78, 0.082) !important;
+}
+
+table#exampleG.dataTable tbody tr:hover {
+  background-color: #dce5f4;
+  cursor: pointer;
+}
+
+table#exampleG.dataTable tbody tr:hover > .sorting_1 {
+  background-color: #dce5f4;
+  cursor: pointer;
+}
+
+table#exampleM.dataTable tbody tr:hover {
+  background-color: #dce5f4;
+  cursor: pointer;
+}
+
+table#exampleM.dataTable tbody tr:hover > .sorting_1 {
+  background-color: #dce5f4;
+  cursor: pointer;
+}
+
+.themed-grid-col {
+ padding-top: .75rem;
+  padding-bottom: .75rem; 
+  background-color: #192c4e;
+  border: 1px solid #1a2c4e;
+}
+
+.themed-container {
+  padding: .75rem;
+  margin-bottom: 1.5rem;
+  background-color: #192c4e ;
+  border: 1px solid #dce5f4; 
+}
+        body {
+            padding: 0;
+            margin: 0;
+        }
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+          font: 7pt "Helvetica Neue", Arial, Helvetica, sans-serif;
+       
+        }
+      }
+      @media (min-width: 100px) {
+        html, body, #map {
+            height: 83.4%;
+            font: 7pt "Helvetica Neue", Arial, Helvetica, sans-serif;
+           
+        }
+        html, body, #tablaprincipal {
+          height :230x;
+           
+        }
+
+      }
+
+      @media (min-width: 1700px) {
+        html, body, #map {
+            height: 86.9%;
+            font: 8pt "Helvetica Neue", Arial, Helvetica, sans-serif;
+           
+        }
+        html, body, #tablaprincipal {
+          height :320x;
+           
+        }
+      }
+
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+      .navbar {
+        background-color : #1a2c4e;
+        color: white;
+          
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+      .dropdown-menu li {
+position: relative;
+}
+.dropdown-menu .dropdown-submenu {
+display: none;
+position: absolute;
+left: 100%;
+top: -7px;
+}
+.dropdown-menu .dropdown-submenu-left {
+right: 100%;
+left: auto;
+}
+.dropdown-menu > li:hover > .dropdown-submenu {
+display: block;
+}
+
+.btnPopup{
+    padding: px;
+    background-color: white;
+    border: 2px solid black;
+    margin: 0px;
+    font-size: 17px;
+    
+}
+.btnActive{
+    background-color: #1a2c4e;
+    color : white;
+}
+.content-table > div > .row > .col-3 {
+    box-sizing: 1px;
+    font-size: 11px;
+}
+.content-table > div > .row > .col-2 {
+  box-sizing: 1px;
+    font-size: 10px;
+    
+}
+.content-table > div > .row > .col-1 {
+    box-sizing: unset !important;
+    font-size: 2px;
+}
+.content-table > div > .row > .col-1 {
+ padding: 0;
+}
+
+table { 
+  width: 100%;
+  text-align: left;
+  background-color: #fff;
+  border-collapse: collapse; 
+  border :3px solid #1a2c4e;
+}
+table th { 
+  background-color: #dce5f4;
+  color: #000; 
+}
+table td{
+  padding: 2px;
+  border: 0px solid #dce5f4; 
+}
+table th{ 
+  padding: 2px;
+  border: 2px solid #dce5f4; 
+ }
+
+ .dataTables_wrapper .dataTables_length{
+  color :#fff;
+ }
+ .dataTables_wrapper .dataTables_length select{
+  background-color :#fff;
+ }
+ .dataTables_wrapper .dataTables_filter{
+  color :#fff;
+ }
+ .dataTables_wrapper .dataTables_filter input{
+  background-color :#fff;
+ }
+ a {
+  color :#fff;
+  text-decoration:none;
+ }
+ table.dataTable thead>tr>th.sorting_asc:before{
+  opacity :.9;
+ }
+ .dataTables_wrapper .dataTables_info{
+  color :#fff;
+ }
+ table.dataTable tbody th, table.dataTable tbody td {
+  padding: 2px ;
+  text-align: center;
+}
+
+ .loader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url('j.gif') 50% 50% no-repeat #fff;
+    opacity: 0.90;
+}
+
+body {
+  background:#fafafa;
+}
+.container {
+  background: #fff;
+  margin: 0 auto 50px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  display: block;
+  text-align: center;
+  max-width: 820px;
+  padding: 20px;
+}
+#downloadBtn {
+  cursor:pointer;
+}
+
+
+
