@@ -308,6 +308,38 @@ if($primerFiltro =="Madurador"){
             //$mensaje ="SPTEMP(17.5)," ;//$mensaje = "SPETI(3),";//$mensaje ="POWERON," ;           
             //$mensaje ="No existen comandos pendientes";
         }
+
+        $comandosPendientesPost2 = $api2->comandosPendientes($segundoFiltro);
+        $contarComandosPendientesPost2 = $api2->contarComandos($segundoFiltro);
+        if($contarComandosPendientesPost2['count(*)'] != 0){
+            foreach($comandosPendientesPost2 as $data1){
+                $detalleComandopost2 = $api2->detalleComando($data1['comando_id']);
+                if($detalleComandopost2['lista']==1){
+                    $trama_respuesta .=",SPTEMP(".$data1['valor_modificado'].")";
+                }elseif($detalleComandopost2['lista']==2){
+                    $trama_respuesta .=",SPCO2(".$data1['valor_modificado'].")";
+                }elseif($detalleComandopost2['lista']==3){
+                    $trama_respuesta .=",SPHUM(".$data1['valor_modificado'].")";
+                }elseif($detalleComandopost2['lista']==6){
+                    $trama_respuesta .=",SPETI(".$data1['valor_modificado'].")";
+                }elseif($detalleComandopost2['lista']==5){
+                    //$trama_respuesta .="POWER".$data1['valor_modificado'];
+                    $trama_respuesta .=",POWEROFF";
+                }elseif($detalleComandopost2['lista']==7){
+                    $trama_respuesta .=",POWERON";
+                }elseif($detalleComandopost2['lista']==8){
+                    $trama_respuesta .=",DEFROST";
+                }else{
+                    $trama_respuesta .=",#".$detalleComandopost2['lista'].",".$data1['valor_modificado'];
+                }            
+            } 
+            $trama_respuesta = "estamos en api2 ";
+            $mensaje =$trama_respuesta;
+        }
+
+
+
+
     }else{
          //pedir trama anterior del dispositivo para comparar      
          $telemetria_id1 =$existeContenedor['telemetria_id'];
@@ -388,32 +420,7 @@ if($primerFiltro =="Madurador"){
                 }              
             }        
         }    
-        $comandosPendientesPost2 = $api2->comandosPendientes($segundoFiltro);
-        $contarComandosPendientesPost2 = $api2->contarComandos($segundoFiltro);
-        if($contarComandosPendientesPost2['count(*)'] != 0){
-            foreach($comandosPendientesPost2 as $data1){
-                $detalleComandopost2 = $api2->detalleComando($data1['comando_id']);
-                if($detalleComandopost2['lista']==1){
-                    $trama_respuesta .=",SPTEMP(".$data1['valor_modificado'].")";
-                }elseif($detalleComandopost2['lista']==2){
-                    $trama_respuesta .=",SPCO2(".$data1['valor_modificado'].")";
-                }elseif($detalleComandopost2['lista']==3){
-                    $trama_respuesta .=",SPHUM(".$data1['valor_modificado'].")";
-                }elseif($detalleComandopost2['lista']==6){
-                    $trama_respuesta .=",SPETI(".$data1['valor_modificado'].")";
-                }elseif($detalleComandopost2['lista']==5){
-                    //$trama_respuesta .="POWER".$data1['valor_modificado'];
-                    $trama_respuesta .=",POWEROFF";
-                }elseif($detalleComandopost2['lista']==7){
-                    $trama_respuesta .=",POWERON";
-                }elseif($detalleComandopost2['lista']==8){
-                    $trama_respuesta .=",DEFROST";
-                }else{
-                    $trama_respuesta .=",#".$detalleComandopost2['lista'].",".$data1['valor_modificado'];
-                }            
-            } 
-            $trama_respuesta = "estamos en api2 ";
-        }
+
         $mensaje = $trama_respuesta;
     }
 
