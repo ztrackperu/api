@@ -334,7 +334,7 @@ if($primerFiltro =="Madurador"){
                     $trama_respuesta .=",#".$detalleComandopost2['lista'].",".$data1['valor_modificado'];
                 }            
             } 
-            $trama_respuesta = "estamos en api2 ";
+            //$trama_respuesta = "estamos en api2 ";
             $mensaje =$trama_respuesta;
         }
 
