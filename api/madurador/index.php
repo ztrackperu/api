@@ -308,6 +308,33 @@ if($primerFiltro =="Madurador"){
             //$mensaje ="SPTEMP(17.5)," ;//$mensaje = "SPETI(3),";//$mensaje ="POWERON," ;           
             //$mensaje ="No existen comandos pendientes";
         }
+        //pedir trama anterior del dispositivo para comparar      
+        $telemetria_id2 =$existeContenedor['telemetria_id'];
+        $tramaAnterior2 = $api2->tramaAnteriorM($telemetria_id2);
+        // tratamos los comandos pendientes
+        $comandosPendientes2 = $api2->comandosPendientes($segundoFiltro);
+        foreach($comandosPendientes2 as $data){
+            $detalleComando = $api2->detalleComando($data['comando_id']);
+            $campo_relacionado = $detalleComando['campo_relacionado'];
+            $valor_buscado = $data['valor_modificado'] ;
+            $valor_anterior = $tramaAnterior2[$campo_relacionado];
+            $valor_trama = $contenedor->$campo_relacionado;
+            $comando_I =$data['comando_id'];
+            $valor_actual = $data['valor_actual'] ; 
+            if ($valor_buscado == $valor_trama ){
+                //despues actualizar estado_comando a 0
+                $actualizarComando = $api2->actualizarComando($data['id']);
+            } 
+            if ($comando_I ==10){ // 10 es para defrost
+                if($valor_actual==$valor_trama){
+                    $actualizarComando = $api2->actualizarComando($data['id']);
+                }else{
+                    // bajamos un grado 
+                    $nuevo_valor_actual = $valor_actual-1;
+                    $actualizarValorActual = $api2->actualizarValorActual($nuevo_valor_actual,$data['id']);
+                }
+            }         
+        }
         $trama_respuesta = "2B59";
         $trama_respuesta .=",".$segundoFiltro ;
         $comandosPendientesPost2 = $api2->comandosPendientes($segundoFiltro);
@@ -334,12 +361,9 @@ if($primerFiltro =="Madurador"){
                     $trama_respuesta .=",#".$detalleComandopost2['lista'].",".$data1['valor_modificado'];
                 }            
             } 
-            $trama_respuesta = "estamos en api2 ";
+            //$trama_respuesta = "estamos en api2 ";
             $mensaje =$trama_respuesta;
         }
-
-
-
 
     }else{
          //pedir trama anterior del dispositivo para comparar      

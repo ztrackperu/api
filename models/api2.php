@@ -23,5 +23,21 @@ class ApiModel2{
         $consult->execute([$comando_id]);
         return $consult->fetch(PDO::FETCH_ASSOC);
     }
+    public function tramaAnteriorM($telemetria_id)
+    { 
+        $consult = $this->pdo->prepare("SELECT * from registro_madurador where telemetria_id =? order by id desc limit 1");
+        $consult->execute([$telemetria_id]);
+        return $consult->fetch(PDO::FETCH_ASSOC);
+    }
+    public function actualizarComando($nombre_dispositivo){
+        $ultima_fecha =date("Y-m-d H:i:s");  
+        $consult = $this->pdo->prepare("UPDATE comandos SET estado_comando=0 ,  fecha_ejecucion=?   WHERE id=?");
+        return $consult->execute([ $ultima_fecha ,$nombre_dispositivo]);
+    }
+    public function actualizarValorActual($nuevo_valor_actual,$nombre_dispositivo){
+        //$ultima_fecha =date("Y-m-d H:i:s");  
+        $consult = $this->pdo->prepare("UPDATE comandos  SET valor_actual=?   WHERE id=?");
+        return $consult->execute([ $nuevo_valor_actual ,$nombre_dispositivo]);
+    }
 
 }
