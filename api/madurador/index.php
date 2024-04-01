@@ -310,7 +310,7 @@ if($primerFiltro =="Madurador"){
         }
         //pedir trama anterior del dispositivo para comparar      
         $telemetria_id2 =$existeContenedor['telemetria_id'];
-        $tramaAnterior2 = $api2->tramaAnteriorM($telemetria_id2);
+        $tramaAnterior2 = $api->tramaAnteriorM($telemetria_id2);
         // tratamos los comandos pendientes
         $comandosPendientes2 = $api2->comandosPendientes($segundoFiltro);
         foreach($comandosPendientes2 as $data){
