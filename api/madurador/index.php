@@ -308,7 +308,8 @@ if($primerFiltro =="Madurador"){
             //$mensaje ="SPTEMP(17.5)," ;//$mensaje = "SPETI(3),";//$mensaje ="POWERON," ;           
             //$mensaje ="No existen comandos pendientes";
         }
-
+        $trama_respuesta = "2B59";
+        $trama_respuesta .=",".$segundoFiltro ;
         $comandosPendientesPost2 = $api2->comandosPendientes($segundoFiltro);
         $contarComandosPendientesPost2 = $api2->contarComandos($segundoFiltro);
         if($contarComandosPendientesPost2['count(*)'] != 0){
