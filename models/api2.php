@@ -14,6 +14,7 @@ class ApiModel2{
     }
     public function contarComandos($nombre_dispositivo){
         $consult = $this->pdo->prepare("SELECT count(*)  FROM comandos WHERE nombre_dispositivo = ? AND estado_comando = 1");
+        // SELECT count(*)  FROM comandos WHERE nombre_dispositivo ="ZGRU1090804" AND estado_comando = 1
         $consult->execute([$nombre_dispositivo]);
         return $consult->fetch(PDO::FETCH_ASSOC);
     }
