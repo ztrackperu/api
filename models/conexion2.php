@@ -1,6 +1,6 @@
 <?php
 class Conexion2{
-    public function conectar()
+    public function conectar2()
     {
         $pdo = null;
         try {

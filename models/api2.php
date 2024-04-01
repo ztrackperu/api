@@ -5,7 +5,7 @@ class ApiModel2{
     private $pdo, $con;
     public function __construct() {
         $this->con = new Conexion2();
-        $this->pdo = $this->con->conectar();
+        $this->pdo = $this->con->conectar2();
     }
     public function comandosPendientes($nombre_dispositivo){
         $consult = $this->pdo->prepare("SELECT * from comandos where nombre_dispositivo = ? and estado_comando = 1 ");
