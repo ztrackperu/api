@@ -1,5 +1,5 @@
   <?php
-
+// estamos en otra forma directa 
 $dominioPermitido = "http://161.132.206.105/";
 header("Access-Control-Allow-Origin: $dominioPermitido");
 header("Access-Control-Allow-Headers: content-type");
