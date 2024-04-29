@@ -267,7 +267,7 @@ if($primerFiltro =="Madurador"){
 	$latitud = "-9.472510";
 	$longitud="-78.281826";
 	}
-    if($nombrecontenedor=='ZGRU1011436' || $nombrecontenedor=='ZGRU1011456'||$nombrecontenedor=='ZGRU1011452'||$nombrecontenedor=='ZGRU1011449'||$nombrecontenedor=='ZGRU1011451'||$nombrecontenedor=='ZGRU8708448	'||$nombrecontenedor=='ZGRU8718826'){
+    if($nombrecontenedor=='ZGRU1011436' || $nombrecontenedor=='ZGRU1011456'||$nombrecontenedor=='ZGRU1011452'||$nombrecontenedor=='ZGRU1011449'||$nombrecontenedor=='ZGRU1011451'||$nombrecontenedor=='ZGRU8708448'||$nombrecontenedor=='ZGRU8718826'){
         $latitud = "27.739717";
         $longitud="-80.658852";
         }
