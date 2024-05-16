@@ -270,7 +270,12 @@ if($primerFiltro =="Madurador"){
     if($nombrecontenedor=='ZGRU1011436' || $nombrecontenedor=='ZGRU1011456'||$nombrecontenedor=='ZGRU1011452'||$nombrecontenedor=='ZGRU1011449'||$nombrecontenedor=='ZGRU1011451'||$nombrecontenedor=='ZGRU8708448'||$nombrecontenedor=='ZGRU8718826'){
         $latitud = "27.739717";
         $longitud="-80.658852";
+    }
+    if($nombrecontenedor=='ZGRU6357290' || $nombrecontenedor=='ZGRU5014794'){
+        $latitud = "-12.210452";
+        $longitud="-76.96628";
         }
+
     //$alarm_number = $contenedor->alarm_number;
     $numero_telefono =  $contenedor->nombre_contenedor;
     $imei =  $contenedor->nombre_contenedor;
