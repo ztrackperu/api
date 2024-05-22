@@ -322,7 +322,7 @@ if($primerFiltro =="Madurador"){
             #SOLO UN DECIMAL y los numeros flotantes con , 
             //$mensaje ="SPTEMP(17.5)," ;//$mensaje = "SPETI(3),";//$mensaje ="POWERON," ;           
             //$mensaje ="No existen comandos pendientes";
-            $mensaje ="TMETI(12)";
+            $mensaje .=" TMETI(12)";
         }
         }
         //pedir trama anterior del dispositivo para comparar      
