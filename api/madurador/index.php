@@ -274,7 +274,20 @@ if($primerFiltro =="Madurador"){
     if($nombrecontenedor=='ZGRU6357290' || $nombrecontenedor=='ZGRU5014794'){
         $latitud = "-12.210452";
         $longitud="-76.96628";
-        }
+    }
+
+    if($nombrecontenedor=='ZGRU6682259' || $nombrecontenedor=='ZGRU2011230'||$nombrecontenedor=='ZGRU9017551'){
+        $latitud ="-12.196373";
+        $longitud="-77.011536";
+    }
+    if($nombrecontenedor=='ZGRU0073765' || $nombrecontenedor=='ZGRU1139619'){
+        $latitud ="-5.18607";
+        $longitud="-80.64331";
+    } 
+    if($nombrecontenedor=='ZGRU8708092' || $nombrecontenedor=='ZGRU6844452'||$nombrecontenedor=='ZGRU8735478'){
+        $latitud ="-12.17264";
+        $longitud="-76.99242";
+    } 
 
     //$alarm_number = $contenedor->alarm_number;
     $numero_telefono =  $contenedor->nombre_contenedor;
