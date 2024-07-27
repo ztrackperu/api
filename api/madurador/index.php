@@ -288,6 +288,10 @@ if($primerFiltro =="Madurador"){
         $latitud ="-12.17264";
         $longitud="-76.99242";
     } 
+    if($nombrecontenedor=='ZGRU4812899'){
+	    $latitud = "-11.093684";
+	    $longitud="-77.586722";
+	}
 
     //$alarm_number = $contenedor->alarm_number;
     $numero_telefono =  $contenedor->nombre_contenedor;
