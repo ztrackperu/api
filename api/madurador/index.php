@@ -280,7 +280,7 @@ if($primerFiltro =="Madurador"){
         $latitud ="-12.196373";
         $longitud="-77.011536";
     }
-    if($nombrecontenedor=='ZGRU0073765' || $nombrecontenedor=='ZGRU1139619'){
+    if($nombrecontenedor=='ZGRU0073765' || $nombrecontenedor=='ZGRU1139619' || $nombrecontenedor=='ZGRU9044691'){
         $latitud ="-5.18607";
         $longitud="-80.64331";
     } 
