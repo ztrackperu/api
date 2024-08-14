@@ -274,7 +274,34 @@ if($primerFiltro =="Madurador"){
     if($nombrecontenedor=='ZGRU6357290' || $nombrecontenedor=='ZGRU5014794'){
         $latitud = "-12.210452";
         $longitud="-76.96628";
-        }
+    }
+
+    if($nombrecontenedor=='ZGRU8702406' || $nombrecontenedor=='ZGRU2011230'||$nombrecontenedor=='ZGRU9017551'){
+        $latitud ="-12.196373";
+        $longitud="-77.011536";
+    }
+    if($nombrecontenedor=='ZGRU0073765' || $nombrecontenedor=='ZGRU1139619' || $nombrecontenedor=='ZGRU9044691'){
+        $latitud ="-5.18607";
+        $longitud="-80.64331";
+    } 
+    if($nombrecontenedor=='ZGRU8708092' || $nombrecontenedor=='ZGRU6844452'||$nombrecontenedor=='ZGRU8735478'){
+        $latitud ="-12.17264";
+        $longitud="-76.99242";
+    } 
+    if($nombrecontenedor=='ZGRU4812899'){
+	    $latitud = "-11.093684";
+	    $longitud="-77.586722";
+	}
+    if($nombrecontenedor=='ZGRU6253228' || $nombrecontenedor=='ZGRU2014239' || $nombrecontenedor=='ZGRU1012750'){
+	    $latitud = "-11.93982";
+	    $longitud="-77.07029";
+	}
+
+    if($nombrecontenedor=='ZGRU9026566'){
+	    $latitud = "39.90904";
+	    $longitud="-75.22086";
+	}
+
 
     //$alarm_number = $contenedor->alarm_number;
     $numero_telefono =  $contenedor->nombre_contenedor;
