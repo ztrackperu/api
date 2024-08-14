@@ -344,10 +344,11 @@ if($primerFiltro =="Madurador"){
             $cursor  = $client->ztrack_ja->madurador->insertOne($buscarUltimo);
         }
         $mensaje =" No existen comandos pendientes";
-        if($nombrecontenedor=="ZGRU2012000"){
+        if($nombrecontenedor=="ZGRU9026566"){
             #SOLO UN DECIMAL y los numeros flotantes con , 
             //$mensaje ="SPTEMP(17.5)," ;//$mensaje = "SPETI(3),";//$mensaje ="POWERON," ;           
             //$mensaje ="No existen comandos pendientes";
+            $mensaje ="AFAMNORMAL "
         }
         //pedir trama anterior del dispositivo para comparar      
         $telemetria_id2 =$existeContenedor['telemetria_id'];
