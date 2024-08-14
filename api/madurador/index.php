@@ -348,7 +348,7 @@ if($primerFiltro =="Madurador"){
             #SOLO UN DECIMAL y los numeros flotantes con , 
             //$mensaje ="SPTEMP(17.5)," ;//$mensaje = "SPETI(3),";//$mensaje ="POWERON," ;           
             //$mensaje ="No existen comandos pendientes";
-            $mensaje ="AFAMNORMAL "
+            $mensaje ="AFAMNORMAL ";
         }
         //pedir trama anterior del dispositivo para comparar      
         $telemetria_id2 =$existeContenedor['telemetria_id'];
