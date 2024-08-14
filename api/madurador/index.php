@@ -345,11 +345,11 @@ if($primerFiltro =="Madurador"){
         }
         $mensaje =" No existen comandos pendientes";
         //if($nombrecontenedor=="ZGRU2012000"){
-        if($nombrecontenedor=="ZGRU8727282"){
+        if($nombrecontenedor=="ZGRU9026566"){
             #SOLO UN DECIMAL y los numeros flotantes con , 
             //$mensaje ="SPTEMP(17.5)," ;//$mensaje = "SPETI(3),";//$mensaje ="POWERON," ;           
             //$mensaje ="No existen comandos pendientes";
-            $mensaje .=" TMETI(12)";
+            $mensaje .=" AFAMNORMAL";
         }
         }
         //pedir trama anterior del dispositivo para comparar      
