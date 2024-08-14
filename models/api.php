@@ -11,13 +11,17 @@ class ApiModel{
 
     public function existeEnControl($nombre_contenedor)
     {
+<<<<<<< HEAD
         $consult = $this->pdo->prepare("SELECT count(*)   FROM control_dispositivos WHERE  (estado_control = 1 or estado_control =2) and nombre_contenedor =?");
+=======
+        $consult = $this->pdo->prepare("SELECT count(*)   FROM control_dispositivos WHERE  (estado_control = 1 or estado_control = 2 ) and nombre_contenedor =?");
+>>>>>>> 8f5da7a4d4f45af794adb0502e3a152961a16de9
         $consult->execute([$nombre_contenedor]);
         return $consult->fetch(PDO::FETCH_ASSOC) ;
     }
     public function DatoEnControl($nombre_contenedor)
     {
-        $consult = $this->pdo->prepare("SELECT *   FROM control_dispositivos WHERE  estado_control = 1 and nombre_contenedor =?");
+        $consult = $this->pdo->prepare("SELECT *   FROM control_dispositivos WHERE  (estado_control = 1 or estado_control = 2) and nombre_contenedor =?");
         $consult->execute([$nombre_contenedor]);
         return $consult->fetch(PDO::FETCH_ASSOC) ;
     }
