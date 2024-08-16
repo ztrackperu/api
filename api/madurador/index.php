@@ -350,7 +350,7 @@ if($primerFiltro =="Madurador"){
             //$mensaje ="No existen comandos pendientes";
             //$mensaje ="AFAMNORMAL ";
             //secuencia
-            //$mensaje ="SPCO2(0,9) luis";
+            $mensaje ="SPCO2(0,9) luis";
             //$mensaje ="OPEN150 ";
 
         }
