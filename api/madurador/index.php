@@ -486,6 +486,9 @@ if($primerFiltro =="Madurador"){
                     $trama_respuesta .=",POWERON";
                 }elseif($detalleComandopost['lista']==8){
                     $trama_respuesta .=",DEFROST";
+                    if($nombrecontenedor=="ZGRU9654717"){
+                        $trama_respuesta .=",PWM_HUMEDAD(5) ";
+                    }
                 }else{
                     $trama_respuesta .=",#".$detalleComandopost['lista'].",".$data1['valor_modificado'];
                 }              
