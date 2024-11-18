@@ -512,6 +512,10 @@ $base_de_mongo =$segundoFiltro."_".$mes_fecha;
   $cursorW  = $client->$base_de_mongo->madurador->insertOne($buscarUltimo);
 
 }
+
+if($nombrecontenedor=="ZGRU8703763"){
+    $mensaje ="RESET ";
+}
     echo $mensaje;  
     //echo "RESET ";
 }
