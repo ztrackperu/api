@@ -514,7 +514,7 @@ $base_de_mongo =$segundoFiltro."_".$mes_fecha;
 }
 
 if($nombrecontenedor=="ZGRU8703763"){
-    $mensaje ="RESET ";
+    //$mensaje ="RESET ";
 }
     echo $mensaje;  
     //echo "RESET ";
