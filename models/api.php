@@ -183,8 +183,9 @@ class ApiModel{
 
     public function error_trama($trama)
     {
-        $consult = $this->pdo->prepare("INSERT INTO errores_trama (trama) VALUES (?)");
-        return $consult->execute([$trama]);
+       // $consult = $this->pdo->prepare("INSERT INTO errores_trama (trama) VALUES (?)");
+        //return $consult->execute([$trama]);
+return $trama;
     }
 
     public function directos($trama)

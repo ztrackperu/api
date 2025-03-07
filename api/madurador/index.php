@@ -1,4 +1,4 @@
-  <?php
+ <?php
 // estamos en otra forma directa 
 $dominioPermitido = "http://161.132.206.105/";
 header("Access-Control-Allow-Origin: $dominioPermitido");
@@ -513,8 +513,8 @@ $base_de_mongo =$segundoFiltro."_".$mes_fecha;
 
 }
 
-if($nombrecontenedor=="ZGRU8703763"){
-    //$mensaje ="RESET ";
+if($nombrecontenedor=="ZGRU6235390" || $nombrecontenedor=="ZGRU8739500"){
+   // $mensaje ="RESET ";
 }
     echo $mensaje;  
     //echo "RESET ";
